@@ -23,9 +23,6 @@ if __name__ == "__main__":
     misclassify_rate = naive_bayes(processed_training_inputs, processed_testing_inputs, processed_training_labels, processed_testing_labels)
     print(f"Misclassification Rate: {misclassify_rate:0.4f}")
 
-    accuracy = accuracy_score(processed_testing_labels, predicted_labels)
-    print(f"accuracy = {accuracy:.5f}")
-
     average_misclassify_rate = cross_validation(processed_training_inputs, processed_testing_inputs, processed_training_labels, processed_testing_labels)
     print(f"Average Misclassification Rate: {average_misclassify_rate:0.4f}")
 
